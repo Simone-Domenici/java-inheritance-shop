@@ -18,5 +18,8 @@ public class Main {
 
         Televisore Samsung = new Televisore("Samsung OLED Max", "Samsung", new BigDecimal(499.99), new BigDecimal(22), true, 32);
         System.out.println(Samsung.getFullName());
+
+        Cuffie Logitech = new Cuffie("Logitech G Pro-X", "Logitech", new BigDecimal(250.99), new BigDecimal(22), false, "black");
+        System.out.println(Logitech.getFullName());
     }
 }
