@@ -15,5 +15,8 @@ public class Main {
 
         Smartphone Pixel = new Smartphone("Google Pixel 8 Pro", "Google", new BigDecimal(900), new BigDecimal(22), "345987756345009", 256);
         System.out.println(Pixel.getFullName());
+
+        Televisore Samsung = new Televisore("Samsung OLED Max", "Samsung", new BigDecimal(499.99), new BigDecimal(22), true, 32);
+        System.out.println(Samsung.getFullName());
     }
 }
