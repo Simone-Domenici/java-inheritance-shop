@@ -11,5 +11,9 @@ public class Main {
         System.out.println(Prodotto.getCode());
         Prodotto.setName("Prodotto Nuovo");
         System.out.println(Prodotto.getFullName());
+
+
+        Smartphone Pixel = new Smartphone("Google Pixel 8 Pro", "Google", new BigDecimal(900), new BigDecimal(22), "345987756345009", 256);
+        System.out.println(Pixel.getFullName());
     }
 }
