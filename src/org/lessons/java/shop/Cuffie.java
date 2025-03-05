@@ -1,6 +1,7 @@
 package org.lessons.java.shop;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Cuffie extends Prodotto{
     public boolean areCabled;
@@ -26,5 +27,18 @@ public class Cuffie extends Prodotto{
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public BigDecimal getDiscountedPrice() {
+        if (this.areCabled) {
+            return getPriceIVA().multiply(new BigDecimal(0.93).setScale(2,RoundingMode.DOWN));
+        }
+        return super.getDiscountedPrice();
+    }
+
+    @Override
+    public String toString() {
+        return "Cuffie: " + this.name + " - Prezzo: " + this.getPriceIVA() + " - Cablate: " + (this.areCabled ? "Si" : "No");
     }
 }

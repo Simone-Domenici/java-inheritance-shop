@@ -87,4 +87,13 @@ public class Prodotto {
         String fullName = this.code + "-" + this.name;
         return fullName;
     }
+
+    public BigDecimal getDiscountedPrice(){
+        return getPriceIVA().multiply(new BigDecimal(0.98)).setScale(2,RoundingMode.DOWN);
+    }
+
+    @Override
+    public String toString() {
+        return "Prodotto: " + this.name + " - Prezzo: " + this.getPriceIVA();
+    }
 }
